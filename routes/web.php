@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\SingleActionControlller;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +41,6 @@ Route::get('/articles/{id}', [PageController::class, 'articles']);
 Route::get('/user/{name?}', function ($name='John') {
     return 'Nama saya '. $name;
 });
+
+//Modifikasi Single Action Controller
+Route::get('/single/{id?}', [SingleActionControlller::class, 'single']);
